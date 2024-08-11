@@ -3,7 +3,6 @@ import random
 def guess_the_number():
     print("Welcome to the Number Guessing Game!")
     
-    # Get the range from the user
     while True:
         try:
             lb = int(input("Enter the lower bound of the range: "))
@@ -16,13 +15,11 @@ def guess_the_number():
         except ValueError:
             print("Please enter valid numbers for the range.")
     
-    # Generate a random number within the specified range
     number_to_guess = random.randint(lb, ub)
     guess = None
 
     print(f"I'm thinking of a number between {lb} and {ub}. Can you guess it?")
     
-    # Main game loop
     while guess != number_to_guess:
         try:
             guess = int(input("Enter your guess: "))
